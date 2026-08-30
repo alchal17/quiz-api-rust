@@ -1,0 +1,28 @@
+[package]
+name = "quiz-api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.13.0"
+serde = {version = "1.0.228", features = ["derive"]}
+diesel = {version = "2.3.9", features = ["postgres", "r2d2"] }
+dotenv = "0.15"
+env_logger = "0.11.10"
+log = "0.4.32"
+serde_json = "1.0.150"
+base64 = "0.22.1"
+uuid = { version = "1.23.4", features = ["v4"] }
+tokio = { version = "1", features = ["full"] }
+futures = "0.3.33"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+overflow-checks = false
+debug = false
+debug-assertions = false
+incremental = false

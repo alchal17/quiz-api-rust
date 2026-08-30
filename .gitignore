@@ -1,0 +1,25 @@
+# Rust build artifacts
+/target
+**/*.rs.bk
+*.pdb
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Machine-specific cargo config (e.g. target-cpu=native)
+.cargo/
+
+# Logs
+*.log
+
+# Uploaded user content
+/uploads/*
+!/uploads/.gitkeep
+
+# Editor / OS cruft
+.idea/
+.vscode/
+*.swp
+.DS_Store
